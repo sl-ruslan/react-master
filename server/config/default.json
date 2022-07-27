@@ -1,0 +1,5 @@
+{
+  "serverPort" : 3001,
+  "dbUrl": "mongodb+srv://Pllumka:<password>@cloud.uiy08.mongodb.net/?retryWrites=true&w=majority"
+
+}
