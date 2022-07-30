@@ -28,6 +28,7 @@ export const Alert = () => {
                     </span>
                  </button>
             </div>
+
         </CSSTransition>
     )
 }

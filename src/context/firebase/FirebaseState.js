@@ -48,6 +48,15 @@ export const FirebaseState = ({children}) => {
     }
 
     const removeNote = async id => {
+        await axios.get(`${url}/dupm/${id}.json`)
+
+        dispatch({
+            type: REMOVE_NOTE,
+            payload: id
+        })
+
+    }
+    const deleteNote = async id => {
         await axios.delete(`${url}/notes/${id}.json`)
 
         dispatch({
@@ -59,7 +68,7 @@ export const FirebaseState = ({children}) => {
 
     return (
         <FirebaseContext.Provider value={{
-            showLoader,fetchNotes, addNote, removeNote,
+            showLoader,fetchNotes, addNote, removeNote,deleteNote,
             loading: state.loading,
             notes: state.notes
         }}>

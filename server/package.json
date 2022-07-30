@@ -2,10 +2,10 @@
   "name": "registration",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index_server.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "node index_server.js",
+    "dev": "nodemon index_server.js"
   },
   "author": "",
   "license": "ISC",

@@ -12,7 +12,7 @@ export const Form = () => {
 
         if (value.trim()){
             firebase.addNote(value.trim()).then( () => {
-                alert.show("Нотатка була создана", 'success')
+                alert.show("Додано нову нотатку", 'success')
             }).catch( () => {
                 alert.show('Щось пішло не так!', 'danger')
             })
@@ -20,9 +20,6 @@ export const Form = () => {
         }else {
             alert.show("Введіть нову нотатку")
         }
-
-
-
 
     }
 
@@ -35,7 +32,6 @@ export const Form = () => {
                     value={value}
                     onChange={e => setValue(e.target.value)}
                 />
-
             </div>
         </form>
     )

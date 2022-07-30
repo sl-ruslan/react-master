@@ -16,19 +16,11 @@ export const Notes = ({notes, onRemove}) => (
                         <small>{note.date}</small>
                     </div>
                     <div>
-                        <button
-                            type="button"
-                            className="btn btn-outline-danger btn-sm"
-                            onClick={() => onRemove(note.id)}
-                        >
-                            &#10006;
-                        </button>
+                        <button type="button" className="btn btn-outline-danger btn-sm" onClick={() => onRemove(note.id)}>&#10006;</button>
                     </div>
+
                 </li>
-
             </CSSTransition>
-
         ))}
-
     </TransitionGroup>
 )

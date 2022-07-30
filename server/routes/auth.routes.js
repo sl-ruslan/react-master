@@ -1,7 +1,7 @@
 const Router = require("express")
 const User = require("../models/User")
 const bcrypt = require("bcrypt-pbkdf")
-const {check, validateResult} = require("express-validator")
+const {check, validationResult} = require("express-validator")
 const router = new Router()
 
 
@@ -13,13 +13,13 @@ router.post('/registration',
     async (req, res) => {
     try {
         console.log(req.body)
-        const errors = validateResult(req)
+        const errors = validationResult(req)
         if (!errors.isEmpty()) {
             return res.status(400).json({message: "Uncorrect request", errors})
 
         }
 
-        const {email, password} = req.body
+        const {email, password} = req.body;
 
         const candidate = await User.findOne({email})
 

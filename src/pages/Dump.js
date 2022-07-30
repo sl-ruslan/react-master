@@ -1,12 +1,11 @@
 import React, { Fragment, useContext, useEffect} from 'react';
-import { Form } from '../components/Form';
 import { Notes } from '../components/Notes';
 import {FirebaseContext} from "../context/firebase/firebaseContext";
 
 
-export function Addnotes () {
+export function Dump () {
 
-    const { notes,fetchNotes, removeNote} = useContext(FirebaseContext)
+    const { notes,fetchNotes, deleteNote} = useContext(FirebaseContext)
 
 
     useEffect(() => {
@@ -15,9 +14,7 @@ export function Addnotes () {
     }, [])
     return (
         <Fragment>
-            <Form/>
-            <hr/>
-                 <Notes notes={notes} onRemove={removeNote}/>
+                : <Notes notes={notes} onRemove={deleteNote}/>
         </Fragment>
     )
 }
